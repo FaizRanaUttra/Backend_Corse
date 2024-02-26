@@ -2,7 +2,7 @@ import mongoose  from "mongoose";
 
 const UserSchema = new mongoose.Schema(
     {
-User:{
+  User:{
     type:string,
     require:true,
     unique:true,
@@ -26,8 +26,10 @@ confirmpassword:{
     unique:true
 }
 
+},
+{
+    timestamps:true
 }
-
 )
 
 export const User = mongoose.model("User",UserSchema)
